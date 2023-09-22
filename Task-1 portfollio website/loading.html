@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    * {
+      padding: 0%;
+      margin: 0%;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    body {
+      background-color: black;
+    }
+
+    .loader {
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(to right, red 0%, #3498db 50%, transparent 50%);
+      background-size: 200% 100%;
+      animation: fill-up 5s linear infinite;
+      border-radius: 1rem;
+      font-size: 4rem;
+    }
+
+    @keyframes fill-up {
+      0% {
+        background-position: -100% 0;
+      }
+
+      100% {
+        background-position: 100% 0;
+      }
+    }
+
+    #main {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      padding: 20%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <div class="loader"></div>
+  </div>
+</body>
+
+</html>

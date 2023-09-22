@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="icon" href="karan.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+  <style>
+    * {
+      padding: 0%;
+      margin: 0%;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    body {
+      background-color: black;
+    }
+
+    .loader {
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(to right, red 0%, #3498db 50%, transparent 50%);
+      background-size: 200% 100%;
+      animation: fill-up 5s linear infinite;
+      border-radius: 1rem;
+      font-size: 4rem;
+    }
+
+    @keyframes fill-up {
+      0% {
+        background-position: -100% 0;
+      }
+
+      100% {
+        background-position: 100% 0;
+      }
+    }
+
+    #main {
+      display: none;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      padding: 20%;
+    }
+
+    #head {
+      color: white;
+      height: 100vh;
+      display: none;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      flex-direction: column;
+      padding: 8rem;
+      background-color: #0b1634;
+
+    }
+
+    #head div {
+      margin-top: 6rem;
+      margin-bottom: 6rem;
+    }
+
+    #one {
+      color: white;
+      margin-top: 3rem;
+    }
+
+    #btn {
+      background-color: rgb(42, 48, 219);
+      font-size: 1.5rem;
+      border-radius: 2rem;
+      border: 1px solid wheat;
+      color: white;
+      padding: 1rem;
+      width: 30vw;
+      transition: width 1s;
+      box-shadow: 1rem 1rem 1rem 1rem black;
+    }
+
+    #btn:hover {
+      width: 40vw;
+      box-shadow: 2rem 2rem 2rem 2rem black;
+      color: aqua;
+    }
+
+    #head a {
+      font-size: 3rem;
+      color: black;
+    }
+
+    #link {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      padding: 2rem;
+      margin-top: 7rem;
+      background-color: #0b1634;
+
+    }
+
+    #link a {
+      margin: 2rem;
+      color: white;
+      border-radius: 50%;
+      background-color: transparent;
+      box-shadow: 2rem 2rem 2rem 2rem black;
+      text-decoration: none;
+      margin: 5rem;
+    }
+
+    #leet {
+      height: 13vh;
+      width: 6vw;
+      border-radius: 50%;
+      text-decoration: none;
+      background-color: transparent;
+      box-shadow: 2rem 2rem 2rem 2rem black;
+
+    }
+
+
+    @media only screen and (min-width : 30px) and (max-width:450px) and (min-height : 80px) and (max-height:1000px) {
+      #leet {
+        height: 10vh;
+        width: 20vw;
+        border-radius: 50%;
+        text-decoration: none;
+        box-shadow: 1rem 1rem 1rem 1rem black;
+      }
+
+      #btn {
+        width: 80vw;
+        transition: width 1s;
+        box-shadow: 1rem 1rem 1rem 1rem black;
+        margin: 5rem;
+      }
+
+      #btn:hover {
+        width: 85vw;
+        box-shadow: 2rem 2rem 2rem 2rem black;
+        color: aqua;
+      }
+
+      #link a {
+        background-color: transparent;
+        box-shadow: 1rem 1rem 1rem 1rem black;
+        margin: 2rem;
+
+      }
+
+    }
+  </style>
+</head>
+
+<body onload="hide_loading()">
+
+  <div id="main">
+    <div class="loader"></div>
+  </div>
+
+
+  <div id="head">
+
+    <div id="one">
+      <h1>Resume</h1>
+    </div>
+
+    <div id="second">
+      <a href="resume.pdf" download><button id="btn">Download Resume</button></a>
+    </div>
+    <div id="link">
+      <a href="https://github.com/Karan-Kumar-Mishra" target="_blank" class="fa fa-github"></a>
+
+      <div id="leetcode">
+        <a href="https://leetcode.com/Karan_mishra22/" target="_blank"> <img id="leet" src="leetcode.png"> </a>
+      </div>
+      <a href="https://linkedin.com/in/karan-mishra-892970247" target="_blank" class="fab fa-linkedin"></a>
+    </div>
+  </div>
+
+</body>
+<script>
+  function hide_loading() {
+    document.getElementById("main").style.display = "flex";
+    setTimeout(() => {
+      document.getElementById("main").style.display = "none";
+      document.body.style.backgroundColor = "#091928";
+      document.getElementById('head').style.display = "flex";
+    }
+      , 3000);
+  }
+</script>
+
+</html>

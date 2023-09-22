@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="icon" href="karan.png" type="image/x-icon">
+  <style>
+    * {
+      padding: 0%;
+      margin: 0%;
+      box-sizing: border-box;
+      outline: none;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #0b1634;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: #0b1634;
+
+    }
+
+    body {
+      background-color: black;
+    }
+
+    .loader {
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(to right, red 0%, #3498db 50%, transparent 50%);
+      background-size: 200% 100%;
+      animation: fill-up 5s linear infinite;
+      border-radius: 1rem;
+      font-size: 4rem;
+    }
+
+    @keyframes fill-up {
+      0% {
+        background-position: -100% 0;
+      }
+
+      100% {
+        background-position: 100% 0;
+      }
+    }
+
+    #main {
+      display: none;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      padding: 20%;
+    }
+
+    h1 {
+      color: wheat;
+    }
+
+    #content {
+      color: wheat;
+      margin: 2rem;
+    }
+
+    #main2 {
+      background-color: #0b1634;
+      height: 90vh;
+    }
+    span{
+      color: white;
+      height: 1vh;
+      width: 4vw;
+      background-color: #0b1634;
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media only screen and (min-width : 30px) and (max-width:450px) and (min-height : 80px) and (max-height:1000px) {
+      #content {
+        margin: 1rem;
+      }
+
+      h1 {
+        margin: 1rem;
+      }
+    }
+   
+  </style>
+</head>
+
+<body onload="hide_loading()">
+
+  <div id="main">
+    <div class="loader"></div>
+  </div>
+  <center id="main2">
+    <h1>About</h1>
+    <h2 id="content"></h2>
+    
+  </center>
+  <center>
+           <span> Copyright &copy; karan kumar mishra</span>
+  </center>
+ 
+</body>
+<script>
+  document.addEventListener('DOMContentLoaded', function (event) {
+    var text2 = "  Hii i am karan mishra Currently pursuing Master of Computer Application from glocal university 2023-2025 Batch.Seeking an opportunity to leverage my technical skills,academic knowledge, and enthusiasm for technology to contribute to the success of an organization and further develop as a professional in the field of computer science. "; // Change the text to your desired message
+    var delay = 60; // Adjust the delay between each character typing
+    document.getElementById('main').style.height = "100vh";
+    var i = 0;
+    function typeWriter() {
+      if (i < text2.length) {
+        document.getElementById("content").textContent += text2.charAt(i);
+        i++;
+        setTimeout(typeWriter, delay);
+      }
+    }
+
+    typeWriter();
+  });
+  function hide_loading() {
+    document.getElementById("main").style.display = "flex";
+    document.getElementById("main2").style.display = "none";
+    setTimeout(() => {
+      document.getElementById("main").style.display = "none";
+      document.body.style.backgroundColor = "#112232"
+      document.getElementById("main2").style.display = "block";
+
+    }
+      , 3000);
+  }
+</script>
+
+</html>

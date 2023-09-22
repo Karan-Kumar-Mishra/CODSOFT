@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Skills</title>
+  <link rel="icon" href="karan.png" type="image/x-icon">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      outline: none;
+      color: wheat;
+    }
+
+    body {
+      background-color: black;
+    }
+
+    .loader {
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(to right, red 0%, #3498db 50%, transparent 50%);
+      background-size: 200% 100%;
+      animation: fill-up 5s linear infinite;
+      border-radius: 1rem;
+      font-size: 4rem;
+    }
+
+    @keyframes fill-up {
+      0% {
+        background-position: -100% 0;
+      }
+
+      100% {
+        background-position: 100% 0;
+      }
+    }
+
+    #main {
+      display: none;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      padding: 20%;
+
+    }
+
+    .item1 {
+      grid-area: c;
+    }
+
+    .item2 {
+      grid-area: cpp;
+    }
+
+    .item3 {
+      grid-area: java;
+    }
+
+    .item4 {
+      grid-area: sql;
+    }
+
+    .item5 {
+      grid-area: python;
+    }
+
+    .item6 {
+      grid-area: html;
+    }
+
+    .item7 {
+      grid-area: css;
+    }
+
+    .item8 {
+      grid-area: javascript;
+    }
+
+    .item9 {
+      grid-area: Nodejs;
+    }
+
+    .item10 {
+      grid-area: MongoDB;
+    }
+
+    .item11 {
+      grid-area: Git;
+    }
+
+    .item12 {
+      grid-area: Github;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        'c cpp python java'
+        'sql html css javascript'
+        'MongoDB Git Github Nodejs';
+      grid-gap: 10px;
+
+      box-shadow: 2rem 2rem 6rem 4rem black;
+      border-radius: 1rem;
+      padding: 0.5rem;
+      border: 1px solid wheat;
+      background-color: #0b1634;
+
+    }
+
+    .grid-container>div {
+      background-color: rgb(255, 255, 255);
+      text-align: center;
+      padding: 3rem;
+      font-size: 30px;
+      color: red;
+      opacity: 0.6;
+      border-radius: 1rem;
+
+    }
+
+    .grid-container>div:hover {
+      opacity: 10;
+      z-index: 200;
+      box-shadow: 4px 4px 4px 4px black;
+
+    }
+
+    #skil {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 3rem;
+
+    }
+
+    @media only screen and (min-width : 30px) and (max-width:450px) and (min-height : 80px) and (max-height:1000px) {
+      .grid-container {
+        display: flex;
+        flex-direction: column;
+
+        height: 100vh;
+        width: 100vw;
+        overflow: scroll;
+        border: 2px solid white;
+      }
+    }
+  </style>
+</head>
+
+<body onload="hide_loading()">
+  <div id="main">
+    <div class="loader"></div>
+  </div>
+  <center>
+    <center>
+
+      <div id="skil">
+        <div class="grid-container">
+          <h1>Technical Skills</h1>
+          <div class="item1">c</div>
+          <div class="item2">cpp</div>
+          <div class="item3">java</div>
+          <div class="item4">sql</div>
+          <div class="item5">python</div>
+          <div class="item6">html</div>
+          <div class="item7">css</div>
+          <div class="item8">java script</div>
+          <div class="item9">Nodejs</div>
+          <div class="item10">MongoDB</div>
+          <div class="item11">Git</div>
+          <div class="item12">Github</div>
+
+        </div>
+    </center>
+
+    </div>
+  </center>
+
+
+</body>
+<script>
+  function hide_loading() {
+    document.getElementById("main").style.display = "flex";
+    document.getElementById('skil').style.display = "none";
+
+    setTimeout(() => {
+      document.getElementById("main").style.display = "none";
+      document.body.style.backgroundColor = "#0b1634";
+      document.getElementById('skil').style.display = "flex";
+    }
+      , 3000);
+  }
+</script>
+
+</html>

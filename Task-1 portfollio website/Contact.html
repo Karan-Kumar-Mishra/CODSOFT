@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="icon" href="karan.png" type="image/x-icon">
+  <style>
+    * {
+      outline: none;
+    }
+
+    html {
+      background-color: #0b1634;
+
+    }
+
+    body {
+      background-color: #0b1634;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .loader {
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(to right, red 0%, #3498db 50%, transparent 50%);
+      background-size: 200% 100%;
+      animation: fill-up 5s linear infinite;
+      border-radius: 1rem;
+      font-size: 4rem;
+    }
+
+    @keyframes fill-up {
+      0% {
+        background-position: -100% 0;
+      }
+
+      100% {
+        background-position: 100% 0;
+      }
+    }
+
+    #main {
+      display: none;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      padding: 20%;
+    }
+
+    #frm {
+      display: none;
+      justify-content: center;
+      justify-items: center;
+      align-content: center;
+      align-content: center;
+      flex-direction: column;
+      background-color: #0b1634;
+
+      height: 90vh;
+      width: 90vw;
+      text-align: center;
+      margin: 2rem;
+    }
+
+    input {
+      padding: 1rem;
+      display: flex;
+      border-radius: 1rem;
+      margin: 1rem;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: 25vw;
+      opacity: 20;
+      animation: ani2;
+      animation-duration: 14s;
+      border: 2px solid black;
+    }
+
+    @keyframes ani2 {
+      0% {
+        opacity: 0;
+
+      }
+
+      25% {
+        opacity: 2;
+
+      }
+
+      50% {
+        opacity: 8;
+
+      }
+
+      70% {
+        opacity: 15;
+
+      }
+
+      100% {
+        opacity: 20;
+
+      }
+    }
+
+    form {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      flex-direction: column;
+
+    }
+
+    textarea {
+      border-radius: 1rem;
+      height: 20vh;
+      width: 27vw;
+      padding: 8px;
+      opacity: 20;
+      animation: ani3;
+      animation-duration: 14s;
+
+    }
+
+    @keyframes ani3 {
+      0% {
+        opacity: 0;
+
+      }
+
+      25% {
+        opacity: 2;
+
+      }
+
+      50% {
+        opacity: 8;
+
+      }
+
+      70% {
+        opacity: 15;
+
+      }
+
+      100% {
+        opacity: 20;
+
+      }
+    }
+
+    #btn2 {
+      width: 10rem;
+      font-size: 1.2rem;
+      opacity: 20;
+      animation: ani1;
+      animation-duration: 14s;
+      border: 2px solid black;
+    }
+
+    @keyframes ani1 {
+      0% {
+        opacity: 0;
+
+      }
+
+      25% {
+        opacity: 2;
+
+      }
+
+      50% {
+        opacity: 8;
+
+      }
+
+      70% {
+        opacity: 15;
+
+      }
+
+      100% {
+        opacity: 20;
+
+      }
+    }
+
+    h1 {
+      color: wheat;
+    }
+
+    @media only screen and (min-width : 30px) and (max-width:450px) and (min-height : 80px) and (max-height:1000px) {
+      textarea {
+        height: 15vh;
+        width: 55vw;
+        margin: 1rem;
+      }
+
+      input {
+        width: 50vw;
+      }
+
+      #btn2 {
+        background-color: rgb(13, 64, 203);
+        border: 2px solid white;
+        color: white;
+        font-size: 2rem;
+        border-radius: 6rem;
+        margin: 4rem;
+      }
+
+      #frm {
+        margin: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body onload="hide_loading()">
+
+  <div id="main">
+    <div class="loader"></div>
+  </div>
+
+  <div id="frm">
+    <center>
+      <h1>Contact me</h1>
+    </center>
+    <form action="https://formsubmit.co/2e725f6230466d3c0b246217003191d6" method="POST">
+      <input type="text" name="name" placeholder="Enetr your name" required>
+      <input type="email" name="email" placeholder="Enetr your email" required>
+      <input type="text" name="number" placeholder="Enetr your phone number" required>
+      <textarea id="text" name="subject" placeholder="Enter your massage"></textarea>
+      <input id="btn2" type="submit" value="Send">
+    </form>
+  </div>
+</body>
+<script>
+  function hide_loading() {
+    document.getElementById("main").style.display = "flex";
+    setTimeout(() => {
+      document.getElementById("main").style.display = "none";
+      document.getElementById('frm').style.display = "flex";
+      document.body.style.backgroundColor = "#0b1634"
+    }
+      , 3000);
+
+
+  }
+</script>
+
+</html>

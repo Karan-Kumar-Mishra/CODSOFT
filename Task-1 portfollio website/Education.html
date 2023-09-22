@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education</title>
+  <link rel="icon" href="karan.png" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+      background-color: #15293c;
+    }
+
+    .loader {
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(to right, red 0%, #3498db 50%, transparent 50%);
+      background-size: 200% 100%;
+      animation: fill-up 5s linear infinite;
+      border-radius: 1rem;
+      font-size: 4rem;
+    }
+
+    @keyframes fill-up {
+      0% {
+        background-position: -100% 0;
+      }
+
+      100% {
+        background-position: 100% 0;
+      }
+    }
+
+    #main {
+      display: none;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      padding: 20%;
+    }
+
+    #head {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      flex-direction: column;
+      color: wheat;
+    }
+
+    #content {
+      border: 2px solid wheat;
+      height: 150vh;
+      width: 50vw;
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      flex-direction: column;
+      border-radius: 2rem;
+      padding: 2rem;
+      box-shadow: 2rem 2rem 6rem 4rem black;
+      background-color: #0b1634;
+
+
+    }
+
+    @media only screen and (min-width : 30px) and (max-width:450px) and (min-height : 80px) and (max-height:1000px) {
+      #content {
+        font-size: 1rem;
+        width: 90vw;
+      }
+    }
+
+    #content {
+      margin: 4rem;
+    }
+
+    #first {
+      margin: 2rem;
+    }
+
+    #second {
+      padding: 2rem;
+    }
+
+    h1 {
+      color: wheat;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body onload="hide_loading()">
+
+  <div id="main">
+    <div class="loader"></div>
+  </div>
+  <center>
+    <div id="head">
+      <h1>Education</h1>
+
+      <div id="content">
+        <div id="first1">
+          <h1>
+            Master of Computer Application 
+          </h1>
+          <p>Glocal University</p>
+        </div>
+        <div id="first">
+          <h1>
+            Bachaelors In Computer Application
+          </h1>
+          <p>Kamla Nehru Institute of physical and social Sciences
+            Sultanpur Uttar Pradesh, India</p>
+        </div>
+        <div id="second">
+          <h1>
+            Senior Secondary School Examination
+          </h1>
+          <p> S.C.R.I.C. collage Sultanpur Uttar Pradesh, India</p>
+        </div>
+
+      </div>
+    </div>
+  </center>
+
+</body>
+<script>
+  function hide_loading() {
+    document.getElementById("main").style.display = "flex";
+    document.getElementById('head').style.display = "none";
+
+    setTimeout(() => {
+      document.getElementById("main").style.display = "none";
+      document.getElementById('head').style.display = "flex";
+      document.body.style.backgroundColor = "#0b1634"
+    }
+      , 3000);
+  }
+</script>
+
+</html>

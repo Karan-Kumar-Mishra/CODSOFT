@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects and Work Samples</title>
+  <link rel="icon" href="karan.png" type="image/x-icon">
+  <style>
+    * {
+      padding: 0%;
+      margin: 0%;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    html {
+      background-color: #0b1634;
+    }
+
+    body {
+      background-color: #0b1634;
+    }
+
+    .loader {
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(to right, red 0%, #3498db 50%, transparent 50%);
+      background-size: 200% 100%;
+      animation: fill-up 5s linear infinite;
+      border-radius: 1rem;
+      font-size: 4rem;
+    }
+
+    @keyframes fill-up {
+      0% {
+        background-position: -100% 0;
+      }
+
+      100% {
+        background-position: 100% 0;
+      }
+    }
+
+    #main {
+      display: none;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      padding: 20%;
+      background-color: #0b1634;
+    }
+
+    #head {
+      color: wheat;
+      border: 2px solid white;
+      height: 80vh;
+      width: 80vw;
+      margin: 5rem;
+      display: none;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      align-content: center;
+      box-shadow: 2rem 2rem 6rem 4rem black;
+      border-radius: 2rem;
+      background-color: #0b1634;
+
+    }
+
+    #head>div {
+      color: wheat;
+      margin: 3rem;
+      padding: 2rem;
+
+    }
+
+    h1 {
+      color: white;
+    }
+
+    a {
+      color: aqua;
+    }
+
+    @media only screen and (min-width : 30px) and (max-width:450px) and (min-height : 80px) and (max-height:1000px) {
+      #head {
+        flex-direction: column;
+        margin: 2rem;
+        height: 120vh;
+        margin: 2.3rem;
+        
+      }
+    }
+  </style>
+</head>
+
+<body onload="hide_loading()">
+  <div id="main">
+    <div class="loader"></div>
+  </div>
+  <center>
+    <h1 id="heading">Projects and Work Samples</h1>
+  </center>
+  <div id="head">
+    <div>
+      <h3>1.chat application</h3>
+      This is a Group chat application which is made by using HTML ,css ,js ,nodejs <br>
+      <a href="https://github.com/Karan-Kumar-Mishra/chat-application-" target="_blank">github</a>
+      <a href="http://m-chat.onrender.com" target="_blank">m-chat</a>
+    </div>
+    <div>
+      <h3>2.Personal protfolio</h3>
+      <a href="http://">Personal protfolio website</a>
+      <a href="https://github.com/Karan-Kumar-Mishra/chat-application-" target="_blank">github</a>
+    </div>
+    <div>
+      <h3>3.QR-code generator</h3>
+      In this software we can make QR code of text,pdf file, text file and url and many more. This software run in GUI mode
+      <a href="https://github.com/Karan-Kumar-Mishra/QR-CODE-generator" target="_blank">github</a>
+
+    </div>
+  </div>
+</body>
+<script>
+  function hide_loading() {
+    document.getElementById("main").style.display = "flex";
+    document.getElementById('heading').style.display = "none";
+    setTimeout(() => {
+      document.getElementById("main").style.display = "none";
+      document.body.style.backgroundColor = "#0b1634";
+      document.getElementById('head').style.display = "flex";
+      document.getElementById('heading').style.display = "block";
+
+    }
+      , 3000);
+  }
+</script>
+
+</html>
